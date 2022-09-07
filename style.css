@@ -1,3 +1,318 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+ul {
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+ul {
+  margin: 0;
+}
+
 h1 {
-  font-size: 30px;
+  font-family: 'BhuTuka Expanded One', cursive;
+  text-transform: uppercase;
+  font-size: 34px;
+  letter-spacing: 10px;
+  font-weight: bold;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Serif', serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Header */
+.header {
+  background-color: #e88282;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.nav__list {
+  padding-left: 0;
+  margin: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.nav__item {
+  padding: 0 15px;
+  padding-bottom: 5px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+
+  position: relative;
+}
+
+.nav__link:hover {
+  color: #fce38a;
+}
+
+.nav__link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #fce38a;
+  position: absolute;
+  opacity: 0;
+  transition: width 0.8s ease-out;
+
+}
+
+.nav__link:hover::after {
+  opacity: 1;
+  width: 100%;
+}
+
+
+/* Intro */
+
+.intro {
+  padding: 0 80px;
+  border-bottom: 5px solid #e88282;
+}
+
+.intro__inner {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 2px solid #e88282;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.intro__title {
+  text-align: center;
+}
+
+.intro__suptitle {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-family: 'BhuTuka Expanded One', cursive;
+}
+
+.section__bg {
+  background-image: url(./assets/img/cv-bg.jpg);
+  background-size: cover;
+  background-position: top;
+}
+
+.my-photo {
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  border-radius: 25%;
+}
+
+
+.contacts {
+  font-family: 'Merienda', cursive;
+  font-weight: bold;
+  list-style-type: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+@media (max-width: 1050px) {
+  .contacts__item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 625px) {
+  .contacts__item {
+    width: 100%;
+  }
+}
+
+.telegram__link {
+  text-decoration: none;
+  position: relative;
+}
+
+.telegram__link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #e88282;
+  position: absolute;
+  opacity: 0;
+  transition: width 0.8s ease-out;
+}
+
+.telegram__link:hover::after {
+  opacity: 1;
+  width: 100%;
+}
+
+
+/* CV Information */
+
+
+.cv__information {
+  padding: 20px 80px;
+  background-image: url(./assets/img/second-bg.jpg);
+  background-size: 100% 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px 10px;
+  grid-template-areas: "skills summary"
+    "code code"
+    "education languages"
+    "courses projects";
+}
+
+.projects {
+  grid-area: projects;
+}
+
+.projects ul li a {
+  text-decoration: none;
+}
+
+.projects ul li a:hover {
+  text-decoration: none;
+  color: #fce38a;
+}
+
+.courses {
+  grid-area: courses;
+}
+
+.languages {
+  grid-area: languages;
+}
+
+.education {
+  grid-area: education;
+}
+
+.skills {
+  grid-area: skills;
+}
+
+.information-ul {
+  padding-top: 10px;
+}
+
+.summary {
+  grid-area: summary;
+}
+
+.summary p {
+  padding-top: 10px;
+}
+
+pre {
+  width: 100%;
+}
+
+.code {
+  padding: 0 30px;
+  background-color: rgba(0, 0, 0, 0.132);
+  grid-area: code;
+  justify-self: center;
+  border-radius: 10%;
+}
+
+.code h2 {
+  padding-top: 20px;
+}
+
+.code-example {
+  white-space: pre-wrap;
+}
+
+@media (max-width: 550px) {
+  .code-example {
+    font-size: 12px;
+  }
+  p {
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+}
+
+/* Footer */
+.footer {
+  background-color: #e88282;
+  padding: 15px;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course__logo {
+  width: 80px
+}
+
+.git__link {
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s linear;
+}
+
+.git__link:hover {
+  color: #fce38a;
 }
