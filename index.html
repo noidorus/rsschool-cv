@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="./style.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=Merienda&family=Noto+Serif:wght@400;700&display=swap"
+    rel="stylesheet">
+  <title>My CV</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#skills">Skills</a></li>
+          <li class="nav__item"><a class="nav__link" href="#summary">Summary</a></li>
+          <li class="nav__item"><a class="nav__link" href="#code">Code Example</a></li>
+          <li class="nav__item"><a class="nav__link" href="#education">Education</a></li>
+          <li class="nav__item"><a class="nav__link" href="#languages">Languages</a></li>
+          <li class="nav__item"><a class="nav__link" href="#courses">Courses</a></li>
+          <li class="nav__item"><a class="nav__link" href="#projects">Projects</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contacts">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--/header-->
+
+  <main>
+    <section class="intro section__bg">
+      <div class="container">
+        <div class="intro__inner">
+          <div class="intro__title">
+            <h1>Rodion Russkikh</h1>
+            <h2 class="intro__suptitle">Front-End Web Developer (Beginner)</h2>
+          </div>
+          <img class="my-photo" src="./assets/img/photo.png" alt="my photo">
+        </div>
+
+        <ul class="contacts" id="contacts">
+          <li class="contacts__item">
+            <img class="item__img" src="./assets/svg/location.svg" alt="location" width="40">
+            <span>Tbilisi , Georgia</span>
+          </li>
+          <li class="contacts__item">
+            <img class="item__img" src="./assets/svg/telegram.svg" alt="tg logo" width="40">
+            <a class="telegram__link" href="https://t.me/HuffPuffTuff">HuffPuffTuff</a>
+          </li>
+          <li class="contacts__item">
+            <img class="item__img" src="./assets/svg/discord-logo.svg" alt="discord logo" width="40">
+            <span>huffpufftuff#5568</span>
+          </li>
+          <li class="contacts__item">
+            <img class="item__img" src="./assets/svg/gmail-logo.svg" alt="gmail logo" width="38">
+            <span>mrsalevan@gmail.com</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--./intro-->
+
+    <section class="cv__information">
+      <div class="container grid">
+        <div class="skills" id="skills">
+          <h2>Skills:</h2>
+          <ul class="information-ul">
+            <li>HTML, CSS, JS</li>
+            <li>Adobe Photoshop, Figma</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+
+        <div class="summary" id="summary">
+          <h2>Summary:</h2>
+          <p>I want to work remotely. I think the Front-End is what I need. I am 23 years old, and I have a higher
+            education. Recently moved to live in Tbilisi. Before that, I worked for 1 year as a barista and 3 years as a
+            manager in a network of massage parlors. I am not working now and I can devote myself completely to my
+            studies</p>
+        </div>
+
+        <div class="code" id="code">
+          <h2>Code Example:</h2>
+          <pre><code class="code-example">
+function isPrime(num) {
+  if (num <= 1) return false;
+  else if (num === 2) return true;
+  for (let i = 2; i * i <= num; i++) {
+    if (num % i === 0) return false;
+  } 
+  return true;
+}</code></pre>
+        </div>
+
+        <div class="education" id="education">
+          <h2>Education:</h2>
+          <ul class="information-ul">
+            <li>Izhevsk Technical State University - Personnel Management</li>
+          </ul>
+        </div>
+
+        <div class="courses" id="courses">
+          <h2>Courses:</h2>
+          <ul class="information-ul">
+            <li>HTMLacademy - HTML, CSS, JS </li>
+            <li>JS/FE Pre-School 2022Q2</li>
+          </ul>
+        </div>
+
+        <div class="languages" id="languages">
+          <h2>Languages</h2>
+          <ul class="information-ul">
+            <li>Russian - Native</li>
+            <li>English - A2</li>
+          </ul>
+        </div>
+
+        <div class="projects" id="projects">
+          <h2>Projects:</h2>
+          <ul class="information-ul">
+            <li><a href="https://huffpufftuff.github.io/travel-project/travel/">Travel Project</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container footer__container">
+      <div>© 2022
+        <a class="git__link" href="https://github.com/HuffPuffTuff">
+          <img src="./assets/svg/github.svg"
+            alt="git logo" width="25">My GitHub Account</a>
+      </div>
+      <a href="https://rs.school/js/">
+        <img class="course__logo" src="./assets/svg/rs_school_js.svg"
+          alt="course logo">
+      </a>
+    </div>
+  </footer>
+</body>
+
+</html>
